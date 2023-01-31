@@ -6,7 +6,8 @@ const app = express();
 app.use(express.json());
 
 app.post("/", async (req, res) => {
-  console.log(req.body)
+  const stringResult = JSON.stringify(req.body)
+  console.log(stringResult)
   res.send("Post successful")
 })
 
